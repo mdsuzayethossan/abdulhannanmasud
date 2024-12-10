@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>হান্নান মাসুদের আগমন, শুভেচ্ছার স্বাগতম</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(45deg, #ff758c, #feb47b, #ff7eb3);
+      background-size: 200% 200%;
+      animation: gradientBG 8s infinite alternate;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    .banner {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      text-align: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      animation: fadeIn 2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .banner img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid #ff7eb3;
+      margin-bottom: 15px;
+      animation: bounce 3s infinite alternate;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .banner h1 {
+      font-size: 2.5rem;
+      color: #ff758c;
+      margin: 10px 0;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      font-family: 'Noto Sans Bengali', sans-serif;
+    }
+
+    .banner p {
+      font-size: 1.5rem;
+      color: #333;
+      font-family: 'Noto Sans Bengali', sans-serif;
+    }
+
+    .footer {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      color: #ff758c;
+      font-family: 'Noto Sans Bengali', sans-serif;
+      animation: glow 3s infinite alternate;
+    }
+
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 10px #ff758c;
+      }
+      100% {
+        text-shadow: 0 0 20px #feb47b;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <img src="https://i.ibb.co.com/prTqcK1/460630697-122251310246002547-312132440817205764-n.jpg" alt="Leader Picture" id="leaderImage">
+    <h1>আবদুল হান্নান মাসুদের আগমন,</h1>
+    <p>শুভেচ্ছার স্বাগতম।</p>
+    <div class="footer" id="footerText">
+      হাতিয়াবাসীর পক্ষ থেকে,<br>
+      লাল গোলাপ শুভেচ্ছা
+    </div>
+  </div>
+
+  <script>
+   const footerMessages = [
+  "হান্নান মাসুদ দিচ্ছে ডাক,<br/> সন্ত্রাসবাদ নিপাত যাক।",
+  "হান্নান মাসুদ দিচ্ছে ডাক,<br/> চাঁদাবাজি নিপাত যাক।",
+  "হান্নান মাসুদ দিচ্ছে ডাক,<br/> টেন্ডারবাজি নিপাত যাক।",
+  "হান্নান মাসুদের আগমন,<br/> শুভেচ্ছার স্বাগতম।",
+  "হাতিয়াবাসীর পক্ষ থেকে,<br/> লাল গোলাপ শুভেচ্ছা",
+  "সন্ত্রাসীদের ঠিকানা,<br/> হাতিয়াতে হবে না।"
+];
+
+
+    let currentMessageIndex = 0;
+
+    function updateFooter() {
+      const footer = document.getElementById('footerText');
+      footer.innerHTML = footerMessages[currentMessageIndex];
+      currentMessageIndex = (currentMessageIndex + 1) % footerMessages.length;
+    }
+
+    setInterval(updateFooter, 2000);
+  </script>
+</body>
+</html>
